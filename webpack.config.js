@@ -8,7 +8,9 @@ module.exports={
   },
   output: {
     filename: "index.js",
-    path:  path.resolve(__dirname, 'dist/lib')
+    path:  path.resolve(__dirname, 'dist/lib'),
+    library: 'xxdUI',
+    libraryTarget: 'umd',
   },
   module:{
     rules:[
@@ -20,7 +22,8 @@ module.exports={
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html'
+      template: 'index.html',
+      title: "xxd的react轮子"
     })
   ]
 };
