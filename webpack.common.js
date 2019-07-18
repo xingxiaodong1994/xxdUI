@@ -1,8 +1,7 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports={
-  mode:"production",
+  // mode:"production",
   entry:{
     index: "./lib/index.tsx",
   },
@@ -12,6 +11,9 @@ module.exports={
     library: 'xxdUI',
     libraryTarget: 'umd',
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
   module:{
     rules:[
       {
@@ -20,10 +22,4 @@ module.exports={
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'index.html',
-      title: "xxd的react轮子"
-    })
-  ]
 };

@@ -1,29 +1,27 @@
 {
   "name": "reactUI",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "repository": "git@github.com:xingxiaodong1994/xxdUI.git",
+  "author": "xingxiaodong <1204642219@qq.com>",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xingxiaodong1994/xxdUI.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xingxiaodong1994/xxdUI/issues"
-  },
-  "homepage": "https://github.com/xingxiaodong1994/xxdUI#readme",
   "dependencies": {
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.6"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
     "awesome-typescript-loader": "^5.2.1",
+    "cross-env": "^5.2.0",
     "html-webpack-plugin": "^3.2.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   }
 }
