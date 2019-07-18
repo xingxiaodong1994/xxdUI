@@ -1,11 +1,9 @@
-interface person {
-    name:string
-}
+import Button from './button';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-function greeter(person:person) {
-    return 'Hello,' + person.name;
-}
+ReactDOM.render(
+    <Button/>,
+    document.getElementById('root')
+);
 
-let user = {name:"friend"};
-
-document.body.innerHTML = greeter(user);

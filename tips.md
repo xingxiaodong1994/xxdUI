@@ -45,15 +45,5 @@
     "url": "https://github.com/xingxiaodong1994/xxdUI/issues"
   },
   "homepage": "https://github.com/xingxiaodong1994/xxdUI#readme",
-  "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-  },
-  "devDependencies": {
-    "@types/react": "^16.8.23",
-    "@types/react-dom": "^16.8.4",
-    "awesome-typescript-loader": "^5.2.1",
-    "html-webpack-plugin": "^3.2.0",
-    "typescript": "^3.5.3"
-  }
+
 }
