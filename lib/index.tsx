@@ -1,7 +1,9 @@
-function greeter(person: string) {
-    return 'Hello,' + person;
-}
+import Button from './button';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-let user = 'friend';
+ReactDOM.render(
+    <Button/>,
+    document.getElementById('root')
+);
 
-document.body.innerHTML = greeter(user);
