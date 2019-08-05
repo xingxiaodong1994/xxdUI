@@ -41,3 +41,12 @@
   "homepage": "https://github.com/xingxiaodong1994/xxdUI#readme",
 
 }
+
+yarn add <packageName> （--save 是 yarn 默认的，依赖会记录在 package.json 的 dependencies 下）
+
+yarn add <packageName> --dev （ 简写 -D，依赖会记录在 package.json 的 devDependencies 下）
+
+yarn global add <packageName> （全局安装依赖）
+
+// 写Icon组件
+1. 下载svg图片从阿里开源。新建icons文件夹放进去。
