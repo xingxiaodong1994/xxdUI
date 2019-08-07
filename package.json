@@ -1,8 +1,10 @@
 {
   "name": "xxdui888",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "main": "index.js",
-  "file":["/dist"],
+  "file": [
+    "/dist/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xingxiaodong1994/xxdUI.git"
