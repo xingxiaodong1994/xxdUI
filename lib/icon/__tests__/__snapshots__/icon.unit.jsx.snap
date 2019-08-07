@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`测试icon组件 icon组件正常渲染 1`] = `
+<svg
+  className="xxdui-icon"
+>
+  <use
+    xlinkHref="#file"
+  />
+</svg>
+`;
