@@ -24,10 +24,8 @@ jobs:
       script: yarn ci
 
     - stage: "deploy"
-      name: "run deploy.sh"
-      script: deploy.sh
-    - script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
       name: "set npm token"
+      script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
     - script: npm publish
       name: "npm publish"
 
