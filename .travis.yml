@@ -9,27 +9,55 @@ cache:
   directories:
     - node_modules
 
+jobs:
+  include:
+    - stage: "init"
+      name: "yarn install"
+      script: yarn install
+
+    - stage: "build"
+      name: "build"
+      script: yarn build
+
+    - stage: "test"
+      name: "ci"
+      script: yarn ci
+
+    - stage: "deploy"
+      name: "run deploy.sh"
+      script: deploy.sh
+    - script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+      name: "set npm token"
+    - script: npm publish
+      name: "npm publish"
 
 # S: Build Lifecycle
-install:
-  - yarn install
+#install:
+#  - yarn install
 
-before_script:
+#before_script:
 
 # 无其他依赖项所以执行npm run build 构建就行了
-script:
-  - yarn ci
-  - yarn build
+#script:
+#  - yarn ci
+#  - yarn build
 
-after_script:
+#after_script:
+#
+#deploy:
+#    provider: script
+#    skip_cleanup: true
+#    script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+#  - script: npm publish
+#  on:
+#    all_branches: true
 
-deploy:
-  provider: script
-  script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN} && npm publish
-  on:
-    all_branches: true
-
-
+stages:
+  - init
+  - build
+  - test
+  - name: deploy
+    if: branch = xingxiaodong
 
 
 #deploy:
