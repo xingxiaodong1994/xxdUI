@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="100">
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -145,7 +145,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565170415793</updated>
       <workItem from="1565170417018" duration="1837000" />
-      <workItem from="1565227972897" duration="11691000" />
+      <workItem from="1565227972897" duration="13122000" />
     </task>
     <task id="LOCAL-00001" summary="file--&gt;files">
       <created>1565229029162</created>
@@ -224,11 +224,25 @@
       <option name="project" value="LOCAL" />
       <updated>1565249652989</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="发布">
+      <created>1565251094689</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1565251094689</updated>
+    </task>
+    <task id="LOCAL-00013" summary="发布">
+      <created>1565251579940</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1565251579940</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13528000" />
+    <option name="totallyTimeSpent" value="14959000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,8 +381,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        <state relative-caret-position="100">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
         </state>
       </provider>
     </entry>

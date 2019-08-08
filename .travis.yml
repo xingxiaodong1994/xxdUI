@@ -9,61 +9,45 @@ cache:
   directories:
     - node_modules
 
+# S: Build Lifecycle
+
+
+
+
 jobs:
   include:
-    - stage: "init"
-      name: "yarn install"
-      script: yarn install
+  - stage: "init"
+    name: "yarn install"
+    install:
+      - yarn install
 
-    - stage: "build"
-      name: "build"
-      script: yarn build
+  - stage: "test"
+    name: "yarn ci"
+    script:
+      - yarn ci
 
-    - stage: "test"
-      name: "ci"
-      script: yarn ci
+  - stage: "build"
+    name: "yarn build"
+    script: yarn build
 
-    - stage: "deploy"
-      name: "set npm token"
+
+  - stage: "deploy"
+    name: "npm publish"
+    deploy:
+      provider: script
+      skip_cleanup: true
       script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-    - script: npm publish
-      name: "npm publish"
-
-# S: Build Lifecycle
-#install:
-#  - yarn install
-
-#before_script:
-
-# 无其他依赖项所以执行npm run build 构建就行了
-#script:
-#  - yarn ci
-#  - yarn build
-
-#after_script:
-#
-#deploy:
-#    provider: script
-#    skip_cleanup: true
-#    script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-#  - script: npm publish
-#  on:
-#    all_branches: true
+        - script: npm publish
+      on:
+        all_branches: true
 
 stages:
   - init
   - build
   - test
-  - name: deploy
-    if: branch = xingxiaodong
-
-
-#deploy:
-#  provider: script
-#  script: deploy.sh
-#  on:
-#    all_branches: true
-#    tags: true
+  - deploy
+#  - name: deploy
+#    if: branch = xingxiaodong
 
 
 #指定分支，只有指定的分支提交时才会运行脚本
