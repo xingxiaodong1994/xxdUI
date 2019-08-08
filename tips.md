@@ -52,6 +52,10 @@ yarn global add <packageName> （全局安装依赖）
 1. 下载svg图片从阿里开源。新建icons文件夹放进去。
 
 npm版本变化规则。
+npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch
+ npm version patch
 API没变化，只修复bug 16.7.0--》16.7.1
+
 API有变化 16.7.0--》16.8.0
+
 大版本： 16.7.0--》17.0.0
