@@ -26,6 +26,8 @@ after_script:
 deploy:
   provider: script
   script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN} && npm publish
+  on:
+    all_branches: true
 
 
 
