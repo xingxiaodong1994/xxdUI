@@ -19,9 +19,10 @@ before_script:
 # 无其他依赖项所以执行npm run build 构建就行了
 script:
   - yarn ci
-  - yarn build
+
 
 after_script:
+  - yarn build
   - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
   - npm publish
 #  - cd ./dist
