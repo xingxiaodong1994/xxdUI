@@ -22,6 +22,8 @@ script:
   - yarn build
 
 after_script:
+  - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+  - npm publish
 #  - cd ./dist
 #  - git init
 #  - git config user.name "${U_NAME}"
