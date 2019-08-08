@@ -1,3 +1,6 @@
-[![Build Status](https://travis-ci.org/xingxiaodong1994/xxdUI.svg?branch=xingxiaodong)](https://travis-ci.org/xingxiaodong1994/xxdUI)
 
-[![NPM](https://nodei.co/npm/<package>.png)](https://npmjs.org/package/<package>)
+![Travis (.org)](https://img.shields.io/travis/xingxiaodong1994/xxdUI)
+
+![npm](https://img.shields.io/npm/v/xxdui888)
+
+![AUR license](https://img.shields.io/aur/license/pac)
