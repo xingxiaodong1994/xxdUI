@@ -27,17 +27,16 @@ jobs:
       - yarn ci
 
   - stage: "build"
-    name: "yarn build"
+    name: "build"
     script: yarn build
 
 
   - stage: "deploy"
-    name: "npm publish"
+    name: "deploy"
     deploy:
       provider: script
       skip_cleanup: true
-      script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-        - script: npm publish
+      script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN} && npm publish
       on:
         all_branches: true
 
