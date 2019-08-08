@@ -23,16 +23,20 @@ script:
 
 after_script:
 
-  - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-  - npm publish
-#  - cd ./dist
-#  - git init
-#  - git config user.name "${U_NAME}"
-#  - git config user.email "${U_EMAIL}"
-#  - git add .
-#  - git commit -m "Update tools"
-#  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
-# E: Build LifeCycle
+deploy:
+  provider: script
+  script: npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN} && npm publish
+
+
+
+
+#deploy:
+#  provider: script
+#  script: deploy.sh
+#  on:
+#    all_branches: true
+#    tags: true
+
 
 #指定分支，只有指定的分支提交时才会运行脚本
 #branches:
