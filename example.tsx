@@ -9,7 +9,7 @@ ReactDOM.render((
         <div>
             <header>
                 <div className="logo">
-                    FUI
+                    XXD1994 UI
                 </div>
 
             </header>
