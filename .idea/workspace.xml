@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22c70c2b-29ba-4f0d-81e0-e3b6b3566224" name="Default Changelist" comment="add badges">
-      <change afterPath="$PROJECT_DIR$/example.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/button/button.example.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/icon/icon.example.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/example.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/button.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/button/button.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/button/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tips.md" beforeDir="false" afterPath="$PROJECT_DIR$/tips.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="22c70c2b-29ba-4f0d-81e0-e3b6b3566224" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/example.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/example.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -29,10 +17,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
+            <state relative-caret-position="284">
               <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
             </state>
           </provider>
@@ -59,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            <state relative-caret-position="253">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -208,7 +196,7 @@
       <updated>1565170415793</updated>
       <workItem from="1565170417018" duration="1837000" />
       <workItem from="1565227972897" duration="18791000" />
-      <workItem from="1565313477929" duration="3133000" />
+      <workItem from="1565313477929" duration="3251000" />
     </task>
     <task id="LOCAL-00001" summary="file--&gt;files">
       <created>1565229029162</created>
@@ -350,11 +338,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565256553182</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="简陋的官网">
+      <created>1565316641469</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1565316641469</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23761000" />
+    <option name="totallyTimeSpent" value="23879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,7 +457,8 @@
     <MESSAGE value=".idea" />
     <MESSAGE value="发布" />
     <MESSAGE value="add badges" />
-    <option name="LAST_COMMIT_MESSAGE" value="add badges" />
+    <MESSAGE value="简陋的官网" />
+    <option name="LAST_COMMIT_MESSAGE" value="简陋的官网" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -556,16 +552,6 @@
     <entry file="file://$PROJECT_DIR$/lib/index.tsx">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/example.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/xxd.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-645">
@@ -575,8 +561,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
+        <state relative-caret-position="284">
           <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
