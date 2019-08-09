@@ -59,3 +59,23 @@ API没变化，只修复bug 16.7.0--》16.7.1
 API有变化 16.7.0--》16.8.0
 
 大版本： 16.7.0--》17.0.0
+
+git tag <tagName> //创建本地tag
+
+git push origin <tagName> //推送到远程仓库
+
+
+git tag -a 0.1.3 -m “Release version 0.1.3″
+
+git tag 是命令
+-a 0.1.3是增加 名为0.1.3的标签
+-m 后面跟着的是标签的注释
+
+// 删除标签的命令
+git tag -d 0.1.3
+
+// 删除远端服务器的标签
+git push origin :refs/tags/0.1.3
+
+git push origin master
+git push origin --tags
