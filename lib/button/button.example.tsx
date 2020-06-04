@@ -1,7 +1,15 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import Button from './button';
 
-const ButtonExample:React.FunctionComponent=()=>{
-    return(<div>button111</div>)
+const ButtonExample: React.FunctionComponent = () => {
+  return (
+    <Fragment>
+        <Button content={'xxx'}/>
+
+        <Button content={'yyy'} type="red"/>
+    </Fragment>
+
+  );
 };
 
-export default ButtonExample
+export default ButtonExample;

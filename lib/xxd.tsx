@@ -1,50 +1,41 @@
-import React, {PureComponent} from 'react';
+import React, {useEffect, useState} from 'react';
 
-class Xxd extends PureComponent {
-    public state: { // state也需要声明类型；
-        array2: number[],
-        object:any
-    };
-
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            array2: [11, 22, 33],
-            object:{
-                name:"小明",
-                value:"100",
-            }
-        };
-    }
-
-    deleteArray = () => {
-        const {array2,object} = this.state;
-         array2.splice(0,1,100);
-        object.name="亚静";
-        console.log("array2");
-        console.log(array2);
-        console.log(object);
-        this.setState({
-            array2,
-            object:Object.assign({},object)
-        })
-    };
-
-    render() {
-        const {array2,object} = this.state;
-        const lis = array2.map((item: number) => (<div onClick={this.deleteArray} key={item}>{item}</div>));
-
-        return (
-            <div>
-                <div>{lis}</div>
-                <div>
-                    <div>{object.name}</div>
-                    <div>{object.value}</div>
-                </div>
-            </div>
-
-        );
-    }
+interface Props {
+  message?: string
 }
+
+
+const Xxd: React.FunctionComponent<Props> = (props) => {
+  Xxd.defaultProps = {
+    message: 'andy1994',
+  };
+  Xxd.displayName = 'andy';
+  const [n, setN] = useState(1);
+  const x = () => {
+    setN(n + 1);
+  };
+
+  // const array:string[]=props.message!.split("");
+
+
+  useEffect(() => {
+    console.log('mounted，');
+    return () => {
+      console.log('unmount');
+    };
+  }, []);
+
+    useEffect(()=>{
+        console.log("n改变")
+        // 如何区分mounted 和 updated
+    },[n]);
+
+    return (
+      <div>
+          <div>{props.message}</div>
+          <div>{n}</div>
+          <button onClick={x}>+1</button>
+      </div>)
+};
 
 export default Xxd;

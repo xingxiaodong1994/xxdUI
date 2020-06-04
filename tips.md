@@ -83,3 +83,59 @@ git push origin :refs/tags/0.1.3
 
 git push origin master
 git push origin --tags
+
+
+> 1.ui框架风格:联通经分系统风格.
+
+类组件：
+onclick绑定this:
+ 1.bind(this)
+ 2.x= ()=>{};
+ 箭头函数问题：浪费内存。this不能共用。无解，我们就需要20个当前的this.
+ 
+ 指定默认值：
+  static defaultProps={指定参数props的默认值。}
+  
+ 指定函数的名字。 
+  static displayName='frank' 不指定默认使用函数或者类的名字。避免调试时重名。
+  
+  prop-types:检查类型的库
+  import PropTypes from 'proptypes' 
+  给js加上类型检查。如果不通过，会在控制台报错。
+  ```
+  static propTypes={
+        message:PropTypes.string
+  }
+  ```
+  计算属性：
+  get name(){
+     return this.state.firstName+this.state.lastName
+  }
+  通过this.name就可以得到计算属性。
+  set name(newName){
+     const [firstName,lastName]=newName.split(" ");
+     this.setState({
+        firstName,
+        lastName
+     })
+  }
+  
+  
+ 
+ cloneElement(<div>,{key:'1'})
+ bug:遮罩层遮不住问题。父div的z-index小。压死怎么办。传送门ReactDOM.creatPortal(dom,document.body)
+ 
+ 外面要用到封装好的函数
+ 函数是延迟执行的。
+ 
+ 代码重构：写完代码立即重构。
+ 消除重复。
+ 抽象。然后合并为一个。
+ 抽象成函数的形式。()=>void
+ dialog: 
+ 要有一个例子，
+ 帮助函数，高阶函数。
+  fragment：包裹 
+  条件判断：&& 表达式 
+  动态生成组件
+  操作函数内变量，闭包返回API
