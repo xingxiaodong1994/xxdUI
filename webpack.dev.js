@@ -4,12 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = Object.assign({}, base, {
   mode: "development",
   entry:{
-    example: './example.tsx',
+    index: './example.tsx',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'example.html',
-      title: "xxdui"
+      template: 'index.html',
     })
   ]
 });
