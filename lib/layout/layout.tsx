@@ -1,15 +1,28 @@
 import * as React from 'react';
 import {Fragment, ReactElement} from 'react';
+
 import './layout.scss';
-interface Props {
-  children?:ReactElement;
+import {fixClass} from '../helpers/classNames';
+import Aside from './aside';
+
+const sc=fixClass('xxdui-layout');
+
+interface Props extends React.HTMLAttributes<HTMLElement>{
+  children:ReactElement | Array<ReactElement>
 }
 const Layout: React.FunctionComponent<Props> = (props) => {
+  const {className,...rest}=props;
+  console.log('props.children');
+  const childAsArray=props.children as Array<ReactElement>;
+  // 遍历节点数组，当发现节点里有侧边栏时，把hasAside变为true
+  const hasAside='length' in childAsArray &&
+    childAsArray.reduce((result,item)=>{return result || item.type===Aside},false);
 
   return (
     <Fragment>
-      <div>layout</div>
-      {props.children}
+      <div className={sc({'':true,hasAside},{extra:className})} {...rest}>
+        {props.children}
+      </div>
     </Fragment>
 
   );
