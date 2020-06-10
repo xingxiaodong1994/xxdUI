@@ -32,8 +32,8 @@ const LayoutExample: React.FunctionComponent<Props> = (props) => {
       </div>
       <div>
         <h1 >第三个例子</h1>
-        <Layout style={{height:300,width:500}}>
-          <Aside style={{background:"lightgreen"}}>侧边栏</Aside>
+        <Layout style={{height:300,width:500}} onClick={()=>{console.log("layout被点击")}}>
+          <Aside onClick={()=>{console.log("侧边栏被点击")}} style={{background:"lightgreen"}}>侧边栏</Aside>
           <Layout>
             <Header style={{background:"#aaa"}}>header</Header>
             <Content>content</Content>

@@ -1,6 +1,7 @@
 import React from 'react';
 import './button.scss';
-import classNames from '../helpers/classNames';
+import {fixClass} from '../helpers/classNames';
+const sc=fixClass('xxdui-button');
 
 interface Props {
   content: string
@@ -8,7 +9,7 @@ interface Props {
 }
 const Button: React.FunctionComponent<Props> = (props) => {
   return (
-    <div className={classNames("xxdui-button",props.type)}>
+    <div className={sc(props.type)}>
       {props.content}
     </div>
   );
