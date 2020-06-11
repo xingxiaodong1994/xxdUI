@@ -10,7 +10,7 @@ module.exports = Object.assign({}, base, {
     // 打包后输出的文件名。可以叫bound.js
     filename: "index.js",
     path:  path.resolve(__dirname, 'dist/lib'),
-    library: 'xxdUI',
+    library: 'xxdui888',  // 指定的就是你使用require时的模块名
     libraryTarget: 'umd',
   },
   externals: {

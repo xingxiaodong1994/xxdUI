@@ -20,13 +20,6 @@ const fixClass=(fixName:string)=>{
             ).join(' ')
         }
 
-        console.log('name2');
-        console.log('result');
-
-        console.log(name2);
-        console.log(result);
-
-
         if(options&&options.extra){
             return[result,options.extra].filter(Boolean).join(' ');
         }

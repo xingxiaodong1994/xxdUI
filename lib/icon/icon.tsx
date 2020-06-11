@@ -8,7 +8,7 @@ interface IconProps extends React.SVGAttributes<SVGElement>{
 
 const Icon:React.FunctionComponent<IconProps>=({className,name,...restProps}:IconProps)=>{
   return (
-      <svg className={sc(className)} {...restProps}>
+      <svg className={sc('',{extra:className})} {...restProps}>
           <use xlinkHref={`#${name}`}/>
       </svg>
   )

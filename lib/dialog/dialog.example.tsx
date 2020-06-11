@@ -22,7 +22,7 @@ const DialogExample: React.FunctionComponent<Props> = (props) => {
       </div>
       <div>
         example2
-        <button onClick={() => {alert('ni hao');}}>click</button>
+        <button onClick={() => {alert('nix hao');}}>clickww</button>
       </div>
     </Fragment>
 
