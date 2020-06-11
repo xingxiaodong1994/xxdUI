@@ -8,13 +8,13 @@ interface ClassToggles {
 const fixClass=(fixName:string)=>{
 
     return (name?:string | ClassToggles,options?:options)=>{
-        let name2
-        let result
+        let name2;
+        let result;
         if(typeof name === "string" || name === undefined){
-            name2=name
+            name2=name;
             result=[fixName,name2].filter(Boolean).join('-');
         }else {
-            name2=Object.entries(name).filter(kv=>kv[1]).map(kv=>kv[0])
+            name2=Object.entries(name).filter(kv=>kv[1]).map(kv=>kv[0]);
             result=name2.map(
               (n)=> [fixName,n].filter(Boolean).join('-')
             ).join(' ')
