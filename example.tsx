@@ -5,6 +5,7 @@ import IconExample from './lib/icon/icon.example';
 import ButtonExample from './lib/button/button.example';
 import DialogExample from './lib/dialog/dialog.example';
 import LayoutExample from './lib/layout/layout.example';
+import PieEchartExample from './lib/pie/pieEchart.example';
 
 ReactDOM.render((
   <Router>
@@ -30,6 +31,9 @@ ReactDOM.render((
             <li>
               <Link to="/layout">layout(布局)</Link>
             </li>
+            <li>
+              <Link to="/pie">echarts饼图</Link>
+            </li>
           </ul>
         </aside>
         <main>
@@ -37,6 +41,7 @@ ReactDOM.render((
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
+          <Route path="/pie" component={PieEchartExample}/>
         </main>
       </div>
     </div>
