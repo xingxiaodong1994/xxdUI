@@ -1,23 +1,19 @@
 @import "../global";
 .xxdui-layout{
-
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  &-hasAside{
-    flex-direction: row;
-    .xxdui-layout{
-      flex-direction: column;
-    }
-  }
   &-header{
-    border: 1px solid green;
   }
   &-content{
   flex-grow: 1;
   }
   & &{
     flex-grow: 1;
-    border: 1px solid blue;
+  }
+  &-hasAside{
+    flex-direction: row;
+    .xxdui-layout{
+      flex-direction: column;
+    }
   }
 }

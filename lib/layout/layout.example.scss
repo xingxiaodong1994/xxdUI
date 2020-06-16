@@ -1,0 +1,23 @@
+.header,.footer{
+  height: 40px;
+  background: lightblue;
+  margin: 4px 0;
+}
+.content{
+  background: #4285f4;
+  color: white;
+  margin: 4px 0;
+}
+.aside{
+  width: 100px;
+  background: #C91717;
+  color: white;
+  margin: 4px 0;
+}
+.firstExample{
+  width: 500px;
+  height: 300px;
+}
+.content+.aside,.aside+.content, .aside+.xxdui-layout{
+  margin-left: 8px;
+}
