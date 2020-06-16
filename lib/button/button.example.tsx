@@ -5,7 +5,6 @@ const ButtonExample: React.FunctionComponent = () => {
   return (
     <Fragment>
         <Button content={'xxx'}/>
-
         <Button content={'yyy'} type="red"/>
     </Fragment>
 

@@ -4,7 +4,7 @@ import Icon from './icon';
 const IconExample: React.FunctionComponent = () => {
     return (
         <div>
-            <Icon name="chart"/>
+            <Icon name="chart" style={{fontSize:"20px"}}/>
             <Icon name="file"/>
             <Icon name="user"/>
         </div>

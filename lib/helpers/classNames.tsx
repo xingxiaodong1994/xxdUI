@@ -1,3 +1,4 @@
+// 给class名加前缀的工具方法。具体用法请查看测试用例 classNames.unit.jsx
 interface options {
     extra:string | undefined
 }
@@ -6,24 +7,22 @@ interface ClassToggles {
     [K:string]:Boolean
 }
 const fixClass=(fixName:string)=>{
-
-    return (name?:string | ClassToggles,options?:options)=>{
-        let name2;
-        let result;
-        if(typeof name === "string" || name === undefined){
-            name2=name;
-            result=[fixName,name2].filter(Boolean).join('-');
-        }else {
-            name2=Object.entries(name).filter(kv=>kv[1]).map(kv=>kv[0]);
-            result=name2.map(
-              (n)=> [fixName,n].filter(Boolean).join('-')
-            ).join(' ')
-        }
+    return (name:string | ClassToggles,options?:options)=>{
+        const  namesObject= typeof name === "string"
+          ? {[name]:name}
+          : name;
+        const scoped=Object
+          .entries(namesObject)
+          .filter(kv=>kv[1]!==false)
+          .map(kv=>kv[0])
+          .map(
+            n=> [fixName,n].filter(Boolean).join('-')
+          ).join(' ');
 
         if(options&&options.extra){
-            return[result,options.extra].filter(Boolean).join(' ');
+            return[scoped,options.extra].filter(Boolean).join(' ');
         }
-        return result
+        return scoped
     }
 
 };

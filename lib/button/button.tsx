@@ -9,7 +9,7 @@ interface Props {
 }
 const Button: React.FunctionComponent<Props> = (props) => {
   return (
-    <div className={sc(props.type)}>
+    <div className={sc(props.type || "")}>
       {props.content}
     </div>
   );

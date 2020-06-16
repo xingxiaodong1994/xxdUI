@@ -26,7 +26,7 @@ interface chartType {
 }
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
-  chartData: {
+  "chart-data": {
     title: string;
     chartX: Array<string>;
     chart: Array<chartType>;
@@ -40,7 +40,7 @@ interface State {
 class PieEchartIndex extends React.PureComponent<Props,State>{
   public chartDom: React.RefObject<any>;
   static defaultProps: Props = {
-    chartData: {
+    'chart-data': {
       title: '多层堆积图',
       chartX: ['2019年1月', '2019年02月'],
       chart: [
@@ -77,15 +77,15 @@ class PieEchartIndex extends React.PureComponent<Props,State>{
   }
 
   componentDidMount(): void {
-    const { chartData } = this.props;
+    const  chartData  = this.props['chart-data'];
     if (chartData) {
       this.createChart(chartData);
     }
   }
 
   componentDidUpdate(prevProps: Readonly<Props>): void {
-    const { chartData } = this.props;
-    if (chartData && !isEqual(prevProps.chartData, chartData)) {
+    const  chartData  = this.props['chart-data'];
+    if (chartData && !isEqual(prevProps['chart-data'], chartData)) {
       this.createChart(chartData);
     }
   }
@@ -95,7 +95,7 @@ class PieEchartIndex extends React.PureComponent<Props,State>{
     return data.indexOf(',') === -1 ? parseFloat(data) : parseFloat(data.replace(/,/g, ''));
   };
 
-  createChart: (chartData: Props['chartData']) => void = data => {
+  createChart: (chartData: Props['chart-data']) => void = data => {
     if (data && data.chartX) {
       const color = ['#FDB984', '#D47279', '#B6A3DC', '#59B0ED'];
       const fontsize = EchartFontSize();
