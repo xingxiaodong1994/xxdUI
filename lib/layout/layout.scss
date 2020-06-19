@@ -2,6 +2,12 @@
 .xxdui-layout{
   display: flex;
   flex-direction: column;
+  &-hasAside{
+    flex-direction: row;
+    .xxdui-layout{
+      // flex-direction: column;
+    }
+  }
   &-header{
   }
   &-content{
@@ -10,10 +16,5 @@
   & &{
     flex-grow: 1;
   }
-  &-hasAside{
-    flex-direction: row;
-    .xxdui-layout{
-      flex-direction: column;
-    }
-  }
+
 }

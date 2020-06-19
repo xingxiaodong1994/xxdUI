@@ -6,17 +6,25 @@ import ButtonExample from './lib/button/button.example';
 import DialogExample from './lib/dialog/dialog.example';
 import LayoutExample from './lib/layout/layout.example';
 import PieEchartExample from './lib/pie/pieEchart.example';
+import {Layout,Aside, Content, Footer, Header} from './lib/layout/layout';
 
+// @ts-ignore
+import logo from './logo.png'
+
+import './example.scss'
+console.log(logo);
+// const logo=require('./logo.png');
 ReactDOM.render((
   <Router>
-    <div>
-      <header>
+    <Layout className='page'>
+      <Header className='pageHeader'>
         <div className="logo">
-          XXD1994 UI
+            <img width={32} height={32} src={logo} alt='logo'/>
         </div>
-      </header>
-      <div>
-        <aside>
+        <div>XXD1994 UI</div>
+      </Header>
+      <Layout>
+        <Aside className='pageAside'>
           <h2>组件</h2>
           <ul>
             <li>
@@ -35,16 +43,17 @@ ReactDOM.render((
               <Link to="/pie">echarts饼图</Link>
             </li>
           </ul>
-        </aside>
-        <main>
+        </Aside>
+        <Content className='pageContent'>
           <Route path="/icon" component={IconExample}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
           <Route path="/pie" component={PieEchartExample}/>
-        </main>
-      </div>
-    </div>
+        </Content>
+      </Layout>
+      <Footer className='pageFooter'>footer</Footer>
+    </Layout>
   </Router>
 ), document.getElementById('root'));
 

@@ -34,6 +34,17 @@ const LayoutExample: React.FunctionComponent<Props> = (props) => {
       <div>
         <h1 >第三个例子</h1>
         <Layout className='firstExample'>
+          <Header className='header'>header</Header>
+          <Layout>
+            <Content className='content'>content</Content>
+            <Aside className='aside'>aside</Aside>
+          </Layout>
+          <Footer className='footer'>footer</Footer>
+        </Layout>
+      </div>
+      <div>
+        <h1 >第四个例子</h1>
+        <Layout className='firstExample'>
           <Aside className='aside'>aside</Aside>
           <Layout>
             <Header className='header'>header</Header>
