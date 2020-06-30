@@ -20,9 +20,7 @@ import IconDemo from './lib/icon/icon.demo';
 
 // require 支持开启自定义加载方式
 // !! 表示开启自定义加载方式
-const x=require('!!raw-loader!./lib/icon/icon.tsx');
-console.log(x.default);
-console.log('--------');
+
 ReactDOM.render((
   <Router>
     <Layout className='page'>
