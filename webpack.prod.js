@@ -1,16 +1,18 @@
 const base = require("./webpack.common");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 module.exports = Object.assign({}, base, {
   mode: "production",
   // 部署项目后项目读取的入口
   entry:{
-    example: './lib/index.tsx',
+    ...base.entry,
+    example: './example.tsx',
   },
   output: {
     // 打包后输出的文件名。可以叫bound.js
-    filename: "index.js",
+  //  filename: "index.js",
     path:  path.resolve(__dirname, 'dist/lib'),
-    library: 'xxdui888',  // 指定的就是你使用require时的模块名
+   // library: 'xxdui888',  // 指定的就是你使用require时的模块名
     libraryTarget: 'umd',
   },
   externals: {
@@ -27,5 +29,10 @@ module.exports = Object.assign({}, base, {
       root: 'ReactDOM',
     },
     'echarts':'echarts'
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+    })
+  ]
 });

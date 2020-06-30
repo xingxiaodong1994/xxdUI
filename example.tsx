@@ -1,7 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {HashRouter as Router, Route, Link} from 'react-router-dom';
-import IconExample from './lib/icon/icon.example';
+
+import *as React from 'react';
+import *as ReactDOM from 'react-dom'
+import {HashRouter as Router, Route, NavLink} from 'react-router-dom';
+// import IconExample from './lib/icon/icon.example';
 import ButtonExample from './lib/button/button.example';
 import DialogExample from './lib/dialog/dialog.example';
 import LayoutExample from './lib/layout/layout.example';
@@ -9,11 +10,19 @@ import PieEchartExample from './lib/pie/pieEchart.example';
 import {Layout,Aside, Content, Footer, Header} from './lib/layout/layout';
 
 // @ts-ignore
-import logo from './logo.png'
+import logo from './logo.png';
 
-import './example.scss'
-console.log(logo);
+import './example.scss';
+import IconDemo from './lib/icon/icon.demo';
+
+// console.log(logo);
 // const logo=require('./logo.png');
+
+// require 支持开启自定义加载方式
+// !! 表示开启自定义加载方式
+const x=require('!!raw-loader!./lib/icon/icon.tsx');
+console.log(x.default);
+console.log('--------');
 ReactDOM.render((
   <Router>
     <Layout className='page'>
@@ -21,31 +30,31 @@ ReactDOM.render((
         <div className="logo">
             <img width={32} height={32} src={logo} alt='logo'/>
         </div>
-        <div>XXD1994 UI</div>
+        <div>unicomeui</div>
       </Header>
       <Layout>
         <Aside className='pageAside'>
           <h2>组件</h2>
           <ul>
             <li>
-              <Link to="/icon">Icon</Link>
+              <NavLink to="/icon">Icon</NavLink>
             </li>
             <li>
-              <Link to="/button">Button</Link>
+              <NavLink to="/button">Button</NavLink>
             </li>
             <li>
-              <Link to="/dialog">dialog(对话框)</Link>
+              <NavLink to="/dialog">dialog(对话框)</NavLink>
             </li>
             <li>
-              <Link to="/layout">layout(布局)</Link>
+              <NavLink to="/layout">layout(布局)</NavLink>
             </li>
             <li>
-              <Link to="/pie">echarts饼图</Link>
+              <NavLink to="/pie">echarts饼图</NavLink>
             </li>
           </ul>
         </Aside>
         <Content className='pageContent'>
-          <Route path="/icon" component={IconExample}/>
+          <Route path="/icon" component={IconDemo}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>

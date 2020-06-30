@@ -1,8 +1,12 @@
-*{margin: 0;padding: 0;box-sizing: border-box}
-*::after{box-sizing: border-box}
-*::before{box-sizing: border-box}
-h1,h2,h3,h4,h5,h6{font-weight: normal}
+@import "./lib/global";
+
+$padding:10px;
+$main-color:#c91717;
+pre{
+  font-family: "Fira Code Medium",Consolas,monospace;
+}
 .page{
+  min-height: 100vh;
   border: 1px solid red;
   .pageHeader{
     height: 50px;
@@ -13,8 +17,24 @@ h1,h2,h3,h4,h5,h6{font-weight: normal}
     justify-content: flex-start;
   }
   .pageAside{
-    background: #e1e0c7;
-    margin: 4px 5px 4px 0;
+   // background: #e1e0c7;
+    margin: 4px 10px 4px 0;
+    ul{
+      min-width: 12em;
+      >li{
+        a{
+          color: #333;
+          padding: 8px $padding;
+          &:hover{
+            color: $main-color;
+          }
+          &.active{
+            color: #fff;
+            background: lighten($main-color,20%);
+          }
+        }
+      }
+    }
   }
   .pageContent{
     margin: 4px 0;

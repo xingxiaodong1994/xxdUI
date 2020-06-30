@@ -3,3 +3,19 @@
 *::after{box-sizing: border-box}
 *::before{box-sizing: border-box}
 h1,h2,h3,h4,h5,h6{font-weight: normal}
+a {
+  text-decoration: none; //去掉下划线
+  color: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  border-bottom: none; //去掉下边框（用text-decoration: none;没有用是时候加上）；
+  display: block;
+}
+body{
+  font-size: 16px;
+}
