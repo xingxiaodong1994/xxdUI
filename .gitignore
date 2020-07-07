@@ -1,4 +1,4 @@
-/doc/*
+
 /dist/*
 /test-results/
 .idea
