@@ -14,6 +14,7 @@ import logo from './logo.png';
 
 import './example.scss';
 import IconDemo from './lib/icon/icon.demo';
+import FormExample from './lib/form/form.example';
 
 // console.log(logo);
 // const logo=require('./logo.png');
@@ -49,6 +50,9 @@ ReactDOM.render((
             <li>
               <NavLink to="/pie">echarts饼图</NavLink>
             </li>
+            <li>
+              <NavLink to="/form">表单</NavLink>
+            </li>
           </ul>
         </Aside>
         <Content className='pageContent'>
@@ -57,6 +61,7 @@ ReactDOM.render((
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
           <Route path="/pie" component={PieEchartExample}/>
+          <Route path="/form" component={FormExample}/>
         </Content>
       </Layout>
       <Footer className='pageFooter'>footer</Footer>
