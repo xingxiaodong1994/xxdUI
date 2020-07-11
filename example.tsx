@@ -29,7 +29,7 @@ ReactDOM.render((
         <div className="logo">
             <img width={32} height={32} src={logo} alt='logo'/>
         </div>
-        <div>unicomeui</div>
+        <div>xxdUI</div>
       </Header>
       <Layout>
         <Aside className='pageAside'>
