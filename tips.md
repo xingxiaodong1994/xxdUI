@@ -153,3 +153,77 @@ onclick绑定this:
   
   赋值不看
   ctrl + [
+  
+  
+  useState 运行原理
+  1. 一开始大脑想象和react的setState一样。定义了一个初始变量，定义了一个设置这个值的函数。
+  同样的函数代码，运行不同的次数得到的值不一样。n会每次加1，如何实现？ 找个全局地方把state存起来。
+  由于同一个组件可能要调用多次useState 所以这个局部变量需要是一个数组，有啦数组就需要有下标。
+  2. 手动触发react更新 update=React.useState(null)[1]
+  
+  React Hooks
+  1. 状态 useState
+  2. 副作用 useEffect  useLayoutEffect
+  3. 上下文 useContext
+  4. Redux useReducer
+  5. 记忆 useMemo useCallback
+  6. 引用 useRef useImperativeHandle
+  7. 自定义 useDebugValue
+  
+  1. const[n,setN]=useState(0)
+  2. const[user,setUser]=useState({name:"xxd",age:"18"})
+  setUser({...user,age:"26"}); // setUser是局部更新，不会帮我们合并属性。所以要写...user! 地址要变，地址不变不渲染。
+  如果要对state进行多次操作可以使用函数即setN(i=>i+1);setN(i=>i+2); 这样会执行两次把n变成3.
+  如果直接写setN(n+1);setN(n+2);n只会变为2.因为每次操作的n都是初始的0，你不会变。
+  3. useReducer
+  使用的是Flux/Redux的思想
+  3.1. 创建初始值initialState
+  3.2. 创建所有操作reducer(state,action)
+  3.3. 传给useReducer,得到 读和写 API
+  3.4. 调用写（{type:"操作类型"}）
+  总的来说userReducer 是 useState 的复杂版。
+  小技巧： 
+  reducer中函数可以用对象包裹一下，通过{...userReducer}把它们引入到reducer中。
+  const {state,dispatch} = useReducer(reducer,state);
+  初始请求接口只需要请求一次，可以写到useEffect中。
+  4. useContext
+  4.1 C=React.createContext(initial) 创建上下文
+  4.2 <C.provider value={{state,dispatch}}><C.provider/> 圈定作用域
+  4.3 在作用域中使用const {state,dispatch}=useContext(C)来使用上下文。
+  5. useEffect 副作用，改变环境变量
+  5.1  useEffect(()=>{},[]) // 第一次执行
+  5.2 useEffect(()=>{}) // 第123...次执行.有任何一个变量变化就执行
+  5.3 useEffect(()=>{},[n]) // 第一次执行 + n变化的时候执行（第一次也算n变化了，从无到有）
+  5.4 useEffect(()=>{return ()={console.log('组件卸载挂掉了执行')}},[])
+  6.useLayoutEffect 渲染之前执行
+  7. useMemo
+  7.1 React默认有多余的render 使用React.memo(Child).则Child 函数组件只会在props改变的时候render
+  7.2 但是如此做有bug.如果Child组件接收了一个回调函数。每次渲染父组件，回调函数的地址发生了改变，导致Child任然会再次执行
+  7.3 此时可以使用useMemo(()=>{return (m)=>{console.log(这里是回调函数)}},[m,n])。只有m或者n变化了。这个回调函数的引用地址才会改变。
+  7.4 这等价于 useCallback((m)=>{console.log(这里是回调函数)})
+  8. 函数式组件每执行一次，都会重新生成state中的n.十分蛋疼。如果你需要一个值在render时保持不变。使用useRef
+  8.1 初始化 const value=useRef(0);
+  8.2 读取 value.current 每次render value.current不会变。 value会变
+  8.3 注意由于两次值相同，不会触发渲染render.需要手动render.比如引入一个保证会变化的其他值来触发render。监听current.
+  9. 由于函数组件不能使用refs
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
